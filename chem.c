@@ -14,6 +14,7 @@ float mb;
 float vb;
 int nb;
 float no;
+char chr;
 
 // Functions
 float acid(void);
@@ -22,6 +23,7 @@ float limit(void);
 
 // Main function
 int main(void) {
+    system("clear");
     while(1) {
         // Acid input
         printf("Enter ma ('0' for empty value):");

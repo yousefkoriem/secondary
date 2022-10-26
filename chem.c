@@ -93,11 +93,15 @@ float limit(void) {
     
     if (lim == 0) {
         printf("Neutral solution\n");
+        return 0;
     }
     else if (lim > 0) {
         printf("acidic solution by (%.5f) moles\n", lim);
+        return 0;
     }
     else{
         printf("basic solution by (%.5f) moles\n", -lim);
+        return 0;
     }
+    return 1;
 }

@@ -54,7 +54,7 @@ int main(void) {
 float acid(void) {
     if (ma == 0 && va == 0) {
         no = ( (mb * vb * na) / nb) / 1000;
-        printf("No.of moles of base = %.5f", no);
+        printf("No.of moles of acid = %.5f", no);
     }
     else if(ma == 0) {
         ma = (mb * vb * na) / (nb * va);

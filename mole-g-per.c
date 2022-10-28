@@ -11,6 +11,7 @@ double p_im;
 
 // Main Function
 int main(void) {
+    system("clear");
     while(1) {
         printf("Moles of needed element: ");
         scanf("%lf", &m1);

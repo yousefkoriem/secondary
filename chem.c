@@ -41,9 +41,9 @@ int main(void) {
         printf("Enter nb ('0' for empty value):");
         scanf("%i", &nb);
 
-        if(ma == 0 || va == 0)
+        if(ma == 0 || va == 0 || na == 0)
             acid();
-        else if(mb == 0 || vb == 0)
+        else if(mb == 0 || vb == 0 || nb == 0)
             base();
         else
             limit();
@@ -66,9 +66,12 @@ float acid(void) {
         printf("va = %.5f [L]", (float) va / 1000);
         return 0;
     }
-    return 1;
+    else if (na == 0) {
+        na = (ma * va * nb) / (mb * vb);
+        printf("No. of 'OH' ions in base = %i", na);
+        return 1;
+    }
 }
-
 float base(void)
 {
     if ( mb == 0 && vb == 0 ) {
@@ -86,6 +89,11 @@ float base(void)
         vb = (ma * va * nb) / (na * mb);
         printf("vb = %.5f [L]", (float) vb / 1000);
         return 0;
+    }
+    else if (nb == 0)
+    {
+        nb = (mb * vb* na) / (ma * va);
+        printf("No. of 'H' ions in acid = %i", nb);
     }
     return 1;
 }
